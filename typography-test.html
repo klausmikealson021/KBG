@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>KBG — Typography Test</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 60px;
+            background: #050505;
+            color: #F1EFE8;
+        }
+
+        .test-page {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .test-header {
+            margin-bottom: 80px;
+            border-bottom: 1px solid rgba(241,239,232,.12);
+            padding-bottom: 30px;
+        }
+
+        .test-header h1 {
+            font-family: var(--font-en-display);
+            font-size: 48px;
+            margin: 0 0 15px;
+        }
+
+        .test-header p {
+            font-family: var(--font-fa-body);
+            color: var(--text-secondary);
+        }
+
+        .font-card {
+            padding: 40px;
+            margin-bottom: 30px;
+
+            background: #0c0c0c;
+
+            border: 1px solid rgba(156,122,60,.2);
+
+            border-radius: 24px;
+        }
+
+        .font-name {
+            font-family: var(--font-en-elegant);
+            font-size: 22px;
+            color: var(--gold-light);
+            margin-bottom: 25px;
+        }
+
+        .fa-sample {
+            font-family: var(--font-fa-body);
+            font-size: 32px;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .en-sample {
+            direction: ltr;
+            text-align: left;
+            font-family: var(--font-en-body);
+            font-size: 30px;
+            line-height: 1.6;
+        }
+
+
+        /* ---------- Individual Font Tests ---------- */
+
+        .vazirmatn {
+            font-family: "Vazirmatn";
+        }
+
+        .lalezar {
+            font-family: "Lalezar";
+        }
+
+        .nastaliq {
+            font-family: "Noto Nastaliq Urdu";
+            line-height: 2.8;
+        }
+
+        .noto-serif {
+            font-family: "Noto Serif";
+        }
+
+        .cormorant {
+            font-family: "Cormorant Garamond";
+        }
+
+        .pacifico {
+            font-family: "Pacifico";
+        }
+
+
+        /* ---------- Italic Tests ---------- */
+
+        .italic {
+            font-style: italic;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="test-page">
+
+
+    <header class="test-header">
+
+        <h1>KBG Typography System</h1>
+
+        <p>
+            تست سیستم تایپوگرافی برند KLAUS
+        </p>
+
+    </header>
+
+
+
+    <!-- VAZIRMATN -->
+
+    <section class="font-card">
+
+        <div class="font-name">
+            Vazirmatn — Persian
+        </div>
+
+        <div class="fa-sample vazirmatn">
+
+            گایج؛ هوش برند برای ساختن،
+            رشد کردن و ماندگار شدن.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LALEZAR -->
+
+    <section class="font-card">
+
+        <div class="font-name">
+            Lalezar — Persian Display
+        </div>
+
+        <div class="fa-sample lalezar">
+
+            گایج
+            <br>
+            هوش برند
+
+        </div>
+
+    </section>
+
+
+
+    <!-- NASTALIQ -->
+
+    <section class="font-card">
+
+        <div class="font-name">
+            Noto Nastaliq Urdu — Decorative
+        </div>
+
+        <div class="fa-sample nastaliq">
+
+            همیشه و تا ابد،
+            کنار کسب‌وکارت.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- NOTO SERIF -->
+
+    <section class="font-card">
+
+        <div class="font-name">
+            Noto Serif — English
+        </div>
+
+        <div class="en-sample noto-serif">
+
+            KLAUS — Brand Intelligence
+
+            <br>
+
+            Build a brand that lasts.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CORMORANT -->
+
+    <section class="font-card">
+
+        <div class="font-name">
+            Cormorant Garamond — Elegant
+        </div>
+
+        <div class="en-sample cormorant">
+
+            KLAUS — Brand Intelligence
+
+            <br>
+
+            Build something timeless.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PACIFICO -->
+
+    <section class="font-card">
+
+        <div class="font-name">
+            Pacifico — Decorative
+        </div>
+
+        <div class="en-sample pacifico">
+
+            Create.
+            <br>
+            Inspire.
+            <br>
+            Remember.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ITALIC -->
+
+    <section class="font-card">
+
+        <div class="font-name">
+            Italic Test
+        </div>
+
+        <div class="en-sample noto-serif italic">
+
+            Intelligence meets identity.
+
+        </div>
+
+        <br>
+
+        <div class="en-sample cormorant italic">
+
+            Intelligence meets identity.
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+</body>
+
+</html>
