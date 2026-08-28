@@ -5,8 +5,12 @@
 
 .logo-card-container{
 
-    width:320px;
-    height:420px;
+    width:600px;
+    height:600px;
+
+    transform:translateX(120px);
+
+
 
     display:flex;
     align-items:center;
