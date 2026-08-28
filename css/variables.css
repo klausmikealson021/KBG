@@ -1,1 +1,171 @@
+:root {
 
+
+/* ==========================
+   BRAND COLORS
+========================== */
+
+
+--black:
+#050505;
+
+
+--black-soft:
+#0b0b0b;
+
+
+--surface:
+#111111;
+
+
+--surface-light:
+#1a1a1a;
+
+
+--red:
+#8a0303;
+
+
+--red-light:
+#a80707;
+
+
+--gold:
+#d4af37;
+
+
+--gold-light:
+#f1d27a;
+
+
+--white:
+#f5f5f5;
+
+
+--gray:
+#8c8c8c;
+
+
+
+
+
+/* ==========================
+   TYPOGRAPHY
+========================== */
+
+
+--font-main:
+
+"Inter",
+"Segoe UI",
+Tahoma,
+sans-serif;
+
+
+
+--font-title:
+
+"Cinzel",
+serif;
+
+
+
+
+
+
+/* ==========================
+   SPACING SYSTEM
+========================== */
+
+
+--space-xs:
+8px;
+
+
+--space-sm:
+16px;
+
+
+--space-md:
+32px;
+
+
+--space-lg:
+64px;
+
+
+--space-xl:
+120px;
+
+
+
+
+
+
+/* ==========================
+   BORDER
+========================== */
+
+
+--radius-sm:
+12px;
+
+
+--radius-md:
+24px;
+
+
+--radius-lg:
+40px;
+
+
+
+
+
+
+/* ==========================
+   SHADOWS
+========================== */
+
+
+--shadow-soft:
+
+0 20px 50px rgba(0,0,0,.45);
+
+
+
+--shadow-deep:
+
+0 50px 120px rgba(0,0,0,.85);
+
+
+
+--shadow-red:
+
+0 30px 80px rgba(138,3,3,.35);
+
+
+
+
+
+
+
+/* ==========================
+   TRANSITIONS
+========================== */
+
+
+--fast:
+.2s ease;
+
+
+--normal:
+.5s cubic-bezier(.22,1,.36,1);
+
+
+--slow:
+1.2s cubic-bezier(.16,1,.3,1);
+
+
+
+}
