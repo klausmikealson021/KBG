@@ -25,7 +25,29 @@
 
 
 <body>
+<!-- ==========================
+     LANGUAGE SWITCHER
+========================== -->
 
+<div class="language-switcher">
+
+    <button
+        type="button"
+        class="language-btn active"
+        data-lang="fa">
+        فارسی
+    </button>
+
+    <span class="language-divider">/</span>
+
+    <button
+        type="button"
+        class="language-btn"
+        data-lang="en">
+        EN
+    </button>
+
+</div>
 
 <!-- ==========================
      OPENING EXPERIENCE
@@ -68,25 +90,30 @@
 </div>
 
 
-    <div class="opening-text">
+   <div class="opening-text">
 
-<h1>
-KLAUS
-</h1>
-
-
-<p class="brand-tagline">
-Brand Intelligence
-</p>
+    <h1 data-i18n="brand.name">
+        KLAUS
+    </h1>
 
 
-<p class="brand-description">
+    <p
+        class="brand-tagline"
+        data-i18n="brand.tagline">
 
-Building intelligent brand systems
-with AI and strategy
+        هوش برند
 
-</p>
+    </p>
 
+
+    <p
+        class="brand-description"
+        data-i18n="brand.description">
+
+        ساخت سیستم‌های هوشمند برند
+        با هوش مصنوعی و استراتژی
+
+    </p>
 
 </div>
 
@@ -107,16 +134,18 @@ with AI and strategy
     <div class="hero-content">
 
 
-        <h2>
-            Brand Guide
-        </h2>
+        <h2 data-i18n="hero.title">
+    راهنمای برند
+</h2>
 
 
-        <p class="hero-description">
+<p
+    class="hero-description"
+    data-i18n="hero.description">
 
-            معرفی کوتاه برند و داستان شکل‌گیری آن
+    معرفی کوتاه برند و داستان شکل‌گیری آن
 
-        </p>
+</p>
 
 
         <div class="intro-video">
@@ -146,10 +175,9 @@ with AI and strategy
 
     <header class="section-header">
 
-        <h2>
-            Philosophy
-        </h2>
-
+        <h2 data-i18n="philosophy.title">
+    فلسفه برند
+</h2>
     </header>
 
 
@@ -168,9 +196,9 @@ with AI and strategy
             </div>
 
 
-            <h3>
-                Vision
-            </h3>
+            <h3 data-i18n="philosophy.vision">
+    چشم‌انداز
+</h3>
 
 
             <div class="card-content">
@@ -194,9 +222,9 @@ with AI and strategy
             </div>
 
 
-            <h3>
-                Values
-            </h3>
+            <h3 data-i18n="philosophy.values">
+    ارزش‌ها
+</h3>
 
 
             <div class="card-content">
@@ -218,9 +246,9 @@ with AI and strategy
             </div>
 
 
-            <h3>
-                Strategy
-            </h3>
+            <h3 data-i18n="philosophy.strategy">
+    استراتژی
+</h3>
 
 
             <div class="card-content">
@@ -252,8 +280,8 @@ with AI and strategy
 
 <header class="section-header">
 
-<h2>
-Identity System
+<h2 data-i18n="identity.title">
+    سیستم هویت
 </h2>
 
 </header>
@@ -267,8 +295,8 @@ Identity System
 
 <div class="card-icon"></div>
 
-<h3>
-Logo System
+<h3 data-i18n="identity.logo">
+    سیستم لوگو
 </h3>
 
 <div class="card-content"></div>
@@ -282,8 +310,8 @@ Logo System
 
 <div class="card-icon"></div>
 
-<h3>
-Color Language
+<h3 data-i18n="identity.color">
+    زبان رنگ
 </h3>
 
 <div class="card-content"></div>
@@ -298,8 +326,8 @@ Color Language
 
 <div class="card-icon"></div>
 
-<h3>
-Typography
+<h3 data-i18n="identity.typography">
+    تایپوگرافی
 </h3>
 
 <div class="card-content"></div>
@@ -331,8 +359,8 @@ Typography
 
 <header class="section-header">
 
-<h2>
-Assets
+<h2 data-i18n="assets.title">
+    دارایی‌ها
 </h2>
 
 </header>
@@ -346,8 +374,8 @@ Assets
 
 <div class="card-icon"></div>
 
-<h3>
-Images
+<h3 data-i18n="assets.images">
+    تصاویر
 </h3>
 
 </article>
@@ -359,8 +387,8 @@ Images
 
 <div class="card-icon"></div>
 
-<h3>
-Videos
+<h3 data-i18n="assets.videos">
+    ویدیوها
 </h3>
 
 </article>
@@ -373,8 +401,8 @@ Videos
 
 <div class="card-icon"></div>
 
-<h3>
-Audio
+<h3 data-i18n="assets.audio">
+    صدا
 </h3>
 
 </article>
@@ -404,8 +432,8 @@ Audio
 <header class="section-header">
 
 
-<h2>
-AI Intelligence
+<h2 data-i18n="ai.title">
+    هوش مصنوعی
 </h2>
 
 
@@ -420,8 +448,8 @@ AI Intelligence
 
 <div class="card-icon"></div>
 
-<h3>
-AI Engine
+<h3 data-i18n="ai.engine">
+    موتور هوش مصنوعی
 </h3>
 
 </article>
@@ -432,8 +460,8 @@ AI Engine
 
 <div class="card-icon"></div>
 
-<h3>
-Automation
+<h3 data-i18n="ai.automation">
+    اتوماسیون
 </h3>
 
 </article>
@@ -445,10 +473,9 @@ Automation
 
 <div class="card-icon"></div>
 
-<h3>
-Brand Assistant
+<h3 data-i18n="ai.assistant">
+    دستیار برند
 </h3>
-
 </article>
 
 
@@ -504,9 +531,9 @@ Brand Assistant
 
 
 
-<h2>
+<h2 data-i18n="closing.title">
 
-Build Beyond Identity
+    فراتر از هویت بساز
 
 </h2>
 
