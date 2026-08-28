@@ -1,171 +1,377 @@
+/* =========================================================
+   KBG — DESIGN SYSTEM
+   Variables + Typography
+   ========================================================= */
+
+
+/* =========================================================
+   FONT FACES
+   ========================================================= */
+
+
+/* ---------- Persian ---------- */
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url("../assets/fonts/Vazirmatn-VariableFont_wght.ttf")
+         format("truetype");
+
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Lalezar";
+    src: url("../assets/fonts/Lalezar-Regular.ttf")
+         format("truetype");
+
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Noto Nastaliq Urdu";
+    src: url("../assets/fonts/NotoNastaliqUrdu-VariableFont_wght.ttf")
+         format("truetype");
+
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+
+/* ---------- English ---------- */
+
+@font-face {
+    font-family: "Noto Serif";
+    src: url("../assets/fonts/NotoSerif-VariableFont_wdth,wght.ttf")
+         format("truetype");
+
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 62.5% 100%;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Noto Serif";
+    src: url("../assets/fonts/NotoSerif-Italic-VariableFont_wdth,wght.ttf")
+         format("truetype");
+
+    font-style: italic;
+    font-weight: 100 900;
+    font-stretch: 62.5% 100%;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("../assets/fonts/CormorantGaramond-VariableFont_wght.ttf")
+         format("truetype");
+
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("../assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf")
+         format("truetype");
+
+    font-style: italic;
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Pacifico";
+    src: url("../assets/fonts/Pacifico-Regular.ttf")
+         format("truetype");
+
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+
+/* =========================================================
+   ROOT DESIGN TOKENS
+   ========================================================= */
+
 :root {
 
 
-/* ==========================
-   BRAND COLORS
-========================== */
+    /* =====================================================
+       BRAND COLORS
+       ===================================================== */
 
+    --black: #050505;
 
---black:
-#050505;
+    --black-soft: #0A0A0A;
 
+    --surface: #111111;
 
---black-soft:
-#0b0b0b;
+    --surface-light: #181818;
 
+    --surface-hover: #202020;
 
---surface:
-#111111;
 
+    --red: #8A0303;
 
---surface-light:
-#1a1a1a;
+    --red-light: #A80707;
 
+    --red-dark: #520202;
 
---red:
-#8a0303;
 
+    --gold: #9C7A3C;
 
---red-light:
-#a80707;
+    --gold-light: #D4AF37;
 
+    --gold-bright: #F1D27A;
 
---gold:
-#d4af37;
 
+    --white: #F1EFE8;
 
---gold-light:
-#f1d27a;
+    --white-soft: #D9D6CF;
 
 
---white:
-#f5f5f5;
+    --gray: #8C8C8C;
 
+    --gray-dark: #555555;
 
---gray:
-#8c8c8c;
 
 
+    /* =====================================================
+       TEXT COLORS
+       ===================================================== */
 
+    --text-primary: var(--white);
 
+    --text-secondary:
+        rgba(241, 239, 232, 0.68);
 
-/* ==========================
-   TYPOGRAPHY
-========================== */
+    --text-muted:
+        rgba(241, 239, 232, 0.42);
 
 
---font-main:
 
-"Inter",
-"Segoe UI",
-Tahoma,
-sans-serif;
+    /* =====================================================
+       PERSIAN TYPOGRAPHY
+       ===================================================== */
 
+    --font-fa-body:
+        "Vazirmatn",
+        sans-serif;
 
 
---font-title:
+    --font-fa-display:
+        "Vazirmatn",
+        sans-serif;
 
-"Cinzel",
-serif;
 
+    --font-fa-special:
+        "Lalezar",
+        sans-serif;
 
 
+    --font-fa-decorative:
+        "Noto Nastaliq Urdu",
+        serif;
 
 
 
-/* ==========================
-   SPACING SYSTEM
-========================== */
+    /* =====================================================
+       ENGLISH TYPOGRAPHY
+       ===================================================== */
 
+    --font-en-body:
+        "Noto Serif",
+        serif;
 
---space-xs:
-8px;
 
+    --font-en-display:
+        "Noto Serif",
+        serif;
 
---space-sm:
-16px;
 
+    --font-en-elegant:
+        "Cormorant Garamond",
+        serif;
 
---space-md:
-32px;
 
+    --font-en-decorative:
+        "Pacifico",
+        cursive;
 
---space-lg:
-64px;
 
 
---space-xl:
-120px;
+    /* =====================================================
+       UNIVERSAL TYPOGRAPHY
+       ===================================================== */
 
+    --font-mono:
+        monospace;
 
 
 
+    /* =====================================================
+       TYPOGRAPHIC WEIGHTS
+       ===================================================== */
 
+    --weight-light: 300;
 
-/* ==========================
-   BORDER
-========================== */
+    --weight-regular: 400;
 
+    --weight-medium: 500;
 
---radius-sm:
-12px;
+    --weight-semibold: 600;
 
+    --weight-bold: 700;
 
---radius-md:
-24px;
+    --weight-heavy: 800;
 
 
---radius-lg:
-40px;
 
+    /* =====================================================
+       SPACING SYSTEM
+       ===================================================== */
 
+    --space-xs: 8px;
 
+    --space-sm: 16px;
 
+    --space-md: 32px;
 
+    --space-lg: 64px;
 
-/* ==========================
-   SHADOWS
-========================== */
+    --space-xl: 120px;
 
+    --space-xxl: 180px;
 
---shadow-soft:
 
-0 20px 50px rgba(0,0,0,.45);
 
+    /* =====================================================
+       BORDER RADIUS
+       ===================================================== */
 
+    --radius-sm: 12px;
 
---shadow-deep:
+    --radius-md: 24px;
 
-0 50px 120px rgba(0,0,0,.85);
+    --radius-lg: 40px;
 
+    --radius-xl: 60px;
 
 
---shadow-red:
 
-0 30px 80px rgba(138,3,3,.35);
+    /* =====================================================
+       BORDERS
+       ===================================================== */
 
+    --border-subtle:
+        1px solid rgba(241, 239, 232, 0.08);
 
 
+    --border-gold:
+        1px solid rgba(156, 122, 60, 0.45);
 
 
+    --border-red:
+        1px solid rgba(138, 3, 3, 0.45);
 
 
-/* ==========================
-   TRANSITIONS
-========================== */
 
+    /* =====================================================
+       SHADOW SYSTEM
+       ===================================================== */
 
---fast:
-.2s ease;
+    --shadow-soft:
+        0 20px 50px rgba(0, 0, 0, 0.45);
 
 
---normal:
-.5s cubic-bezier(.22,1,.36,1);
+    --shadow-deep:
+        0 50px 120px rgba(0, 0, 0, 0.85);
 
 
---slow:
-1.2s cubic-bezier(.16,1,.3,1);
+    --shadow-card:
+        0 35px 80px rgba(0, 0, 0, 0.65);
 
 
+    --shadow-red:
+        0 30px 90px rgba(138, 3, 3, 0.30);
+
+
+    --shadow-gold:
+        0 30px 90px rgba(156, 122, 60, 0.20);
+
+
+
+    /* =====================================================
+       TRANSITIONS
+       ===================================================== */
+
+    --ease-standard:
+        cubic-bezier(.22, 1, .36, 1);
+
+
+    --ease-smooth:
+        cubic-bezier(.16, 1, .3, 1);
+
+
+    --transition-fast:
+        .2s var(--ease-standard);
+
+
+    --transition-normal:
+        .5s var(--ease-standard);
+
+
+    --transition-slow:
+        1.2s var(--ease-smooth);
+
+
+
+    /* =====================================================
+       LAYOUT
+       ===================================================== */
+
+    --content-width:
+        1280px;
+
+
+    --section-padding:
+        clamp(80px, 10vw, 180px);
+
+
+    --side-padding:
+        clamp(20px, 6vw, 100px);
+
+
+
+    /* =====================================================
+       Z-INDEX
+       ===================================================== */
+
+    --z-background: 0;
+
+    --z-content: 10;
+
+    --z-card: 20;
+
+    --z-controls: 50;
+
+    --z-modal: 100;
+
+    --z-opening: 200;
 
 }
