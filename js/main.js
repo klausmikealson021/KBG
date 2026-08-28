@@ -80,6 +80,29 @@ const translations = {
             "دستیار برند",
 
 
+       "nav.opening":
+    "شروع",
+
+"nav.intro":
+    "معرفی",
+
+"nav.philosophy":
+    "فلسفه",
+
+"nav.identity":
+    "هویت",
+
+"nav.assets":
+    "دارایی‌ها",
+
+"nav.ai":
+    "هوش مصنوعی",
+
+"nav.music":
+    "موسیقی",
+
+       
+
         "closing.title":
             "فراتر از هویت بساز"
 
@@ -157,6 +180,28 @@ const translations = {
             "Brand Assistant",
 
 
+"nav.opening":
+    "Opening",
+
+"nav.intro":
+    "Introduction",
+
+"nav.philosophy":
+    "Philosophy",
+
+"nav.identity":
+    "Identity",
+
+"nav.assets":
+    "Assets",
+
+"nav.ai":
+    "AI",
+
+"nav.music":
+    "Music",
+
+       
         "closing.title":
             "Build Beyond Identity"
 
@@ -269,3 +314,52 @@ const savedLanguage =
 setLanguage(
     savedLanguage || "fa"
 );
+
+
+/* =========================================================
+   MAIN NAVIGATION
+   ========================================================= */
+
+const navigationItems =
+    document.querySelectorAll(".nav-item");
+
+
+navigationItems.forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        const sectionId =
+            item.dataset.section;
+
+        const target =
+            document.getElementById(sectionId);
+
+
+        if (!target) {
+            return;
+        }
+
+
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+
+        navigationItems.forEach(navItem => {
+
+            navItem.classList.remove("active");
+
+        });
+
+
+        item.classList.add("active");
+
+    });
+
+});
+
+
+
+
+
