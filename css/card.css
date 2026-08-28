@@ -1,105 +1,65 @@
 /* =========================================================
-   KBG — Base Card System
+   KBG — Interactive Card System
    ========================================================= */
 
 .kbg-card {
-    --card-radius: 24px;
-    --card-border: rgba(255, 255, 255, 0.08);
-    --card-bg: rgba(255, 255, 255, 0.025);
-    --card-bg-hover: rgba(255, 255, 255, 0.045);
-    --card-accent: #ff1a1a;
+    --card-radius: var(--radius-md);
+    --card-dark: var(--surface);
+    --card-dark-soft: var(--surface-light);
+    --card-cream: var(--white);
 
     position: relative;
     width: 100%;
-
-    border: 1px solid var(--card-border);
-    border-radius: var(--card-radius);
-
-    background: var(--card-bg);
-
-    overflow: hidden;
-
-    transition:
-        transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
-        background 400ms ease,
-        border-color 400ms ease,
-        box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+    min-height: 320px;
+    isolation: isolate;
 }
 
 
 /* =========================================================
-   HOVER
-   ========================================================= */
-
-.kbg-card:hover {
-
-    background: var(--card-bg-hover);
-
-    border-color: rgba(255, 255, 255, 0.14);
-
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.35),
-        0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-
-/* =========================================================
-   TRIGGER
+   MAIN DARK CARD
    ========================================================= */
 
 .kbg-card__trigger {
-
     position: relative;
+    z-index: 2;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
 
-    gap: 18px;
-
     width: 100%;
+    min-height: 280px;
+    padding: 40px 28px 70px;
 
-    min-height: 180px;
+    border: 1px solid rgba(241, 239, 232, 0.10);
+    border-radius: var(--card-radius);
 
-    padding: 32px;
+    background:
+        linear-gradient(
+            145deg,
+            var(--card-dark-soft),
+            var(--card-dark)
+        );
 
-    border: 0;
-
-    outline: none;
-
-    background: transparent;
-
-    color: inherit;
-
+    color: var(--text-primary);
     font: inherit;
-
     text-align: center;
-
     cursor: pointer;
+
+    box-shadow: var(--shadow-card);
+
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
 
-    width: 100%;
-    min-height: 150px;
 
-    padding: 32px;
-
-    border: 0;
-    outline: none;
-
-    background: transparent;
-    color: inherit;
-
-    font: inherit;
-
-    text-align: start;
-
-    cursor: pointer;
+.kbg-card__trigger:hover {
+    transform: translateY(-8px);
+    border-color: rgba(156, 122, 60, 0.45);
+    box-shadow: var(--shadow-deep);
 }
 
 
@@ -108,27 +68,23 @@
    ========================================================= */
 
 .kbg-card__icon {
-
     display: grid;
     place-items: center;
 
-    width: 52px;
-    height: 52px;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
 
-    flex: 0 0 52px;
+    color: var(--gold-bright);
+    font-size: 52px;
+    line-height: 1;
 
-    border-radius: 16px;
+    transition: transform var(--transition-normal);
+}
 
-    background: rgba(255, 255, 255, 0.05);
 
-    color: rgba(255, 255, 255, 0.9);
-
-    font-size: 28px;
-
-    transition:
-        transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
-        background 400ms ease,
-        color 400ms ease;
+.kbg-card__trigger:hover .kbg-card__icon {
+    transform: translateY(-4px) scale(1.06);
 }
 
 
@@ -137,36 +93,46 @@
    ========================================================= */
 
 .kbg-card__title {
-
-    font-size: 1.15rem;
-
-    font-weight: 600;
-
-    letter-spacing: 0.01em;
-
-    transition:
-        transform 400ms ease,
-        color 400ms ease;
+    font-family: var(--font-fa-display);
+    font-size: 1.35rem;
+    font-weight: var(--weight-semibold);
+    color: var(--white);
 }
 
 
 /* =========================================================
-   TRIGGER HOVER
+   CREAM HINT CARD
    ========================================================= */
 
-.kbg-card__trigger:hover .kbg-card__icon {
+.kbg-card__hint {
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
 
-    transform: scale(1.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    background: rgba(255, 26, 26, 0.12);
+    min-height: 72px;
+    padding: 16px 20px;
 
-    color: var(--card-accent);
+    border-radius: 0 0 18px 18px;
+
+    background: var(--white-soft);
+    color: var(--black);
+
+    font-size: 0.9rem;
+    font-weight: var(--weight-medium);
+
+    transform: translateY(28px);
+    transition: transform var(--transition-normal);
 }
 
 
-.kbg-card__trigger:hover .kbg-card__title {
-
-    transform: translateX(4px);
+.kbg-card__trigger:hover + .kbg-card__hint {
+    transform: translateY(20px);
 }
 
 
@@ -175,26 +141,27 @@
    ========================================================= */
 
 .kbg-card__content {
-
     display: grid;
-
     grid-template-rows: 0fr;
-
     opacity: 0;
 
     transition:
-        grid-template-rows 600ms cubic-bezier(0.22, 1, 0.36, 1),
+        grid-template-rows 600ms var(--ease-standard),
         opacity 350ms ease;
 }
 
 
 .kbg-card__content-inner {
-
     min-height: 0;
-
     overflow: hidden;
+    padding: 0 28px;
+}
 
-    padding-inline: 32px;
+
+.kbg-card__content-inner p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.9;
 }
 
 
@@ -202,44 +169,25 @@
    OPEN STATE
    ========================================================= */
 
-.kbg-card.is-open {
-
-    border-color: rgba(255, 26, 26, 0.25);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 26, 26, 0.045),
-            rgba(255, 255, 255, 0.025)
-        );
-
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.45),
-        0 0 0 1px rgba(255, 26, 26, 0.04);
+.kbg-card.is-open .kbg-card__trigger {
+    border-color: rgba(156, 122, 60, 0.50);
 }
 
 
 .kbg-card.is-open .kbg-card__content {
-
     grid-template-rows: 1fr;
-
     opacity: 1;
 }
 
 
 .kbg-card.is-open .kbg-card__content-inner {
-
-    padding-bottom: 32px;
+    padding-top: 24px;
+    padding-bottom: 28px;
 }
 
 
-.kbg-card.is-open .kbg-card__icon {
-
-    background: rgba(255, 26, 26, 0.12);
-
-    color: var(--card-accent);
-
-    transform: rotate(8deg) scale(1.05);
+.kbg-card.is-open .kbg-card__hint {
+    transform: translateY(100%);
 }
 
 
@@ -248,42 +196,8 @@
    ========================================================= */
 
 .kbg-card__trigger:focus-visible {
-
-    outline: 2px solid var(--card-accent);
-
-    outline-offset: -2px;
-}
-
-
-/* =========================================================
-   CONTENT TEXT
-   ========================================================= */
-
-.kbg-card__content-inner p {
-
-    margin: 0;
-
-    max-width: 700px;
-
-    color: rgba(255, 255, 255, 0.65);
-
-    line-height: 1.9;
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .kbg-card,
-    .kbg-card__icon,
-    .kbg-card__title,
-    .kbg-card__content {
-
-        transition: none;
-    }
+    outline: 2px solid var(--gold-bright);
+    outline-offset: 4px;
 }
 
 
@@ -293,36 +207,37 @@
 
 @media (max-width: 768px) {
 
-    .kbg-card__trigger {
-
-        min-height: 120px;
-
-        padding: 24px;
-
-        gap: 14px;
+    .kbg-card {
+        min-height: 290px;
     }
 
+    .kbg-card__trigger {
+        min-height: 250px;
+        padding: 32px 24px 62px;
+    }
 
     .kbg-card__icon {
-
-        width: 46px;
-        height: 46px;
-
-        flex-basis: 46px;
-
-        font-size: 24px;
+        width: 56px;
+        height: 56px;
+        font-size: 44px;
     }
 
-
-    .kbg-card__content-inner {
-
-        padding-inline: 24px;
+    .kbg-card__hint {
+        min-height: 64px;
     }
+}
 
 
-    .kbg-card.is-open .kbg-card__content-inner {
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
 
-        padding-bottom: 24px;
+@media (prefers-reduced-motion: reduce) {
+
+    .kbg-card__trigger,
+    .kbg-card__icon,
+    .kbg-card__hint,
+    .kbg-card__content {
+        transition: none;
     }
-
 }
